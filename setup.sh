@@ -35,5 +35,5 @@ php artisan migrate -y
 #install dependencies here such as python connectors
 
 #run server
-php-fpm
+#php-fpm
 apache2 -D FOREGROUND
