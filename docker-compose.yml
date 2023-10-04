@@ -10,9 +10,9 @@ services:
       - mysql
     networks:
       - my-network
-    volumes:
-      - c:/dev/dbdl-perk-randomizer-app/src:/var/www/html
-    entrypoint: /opt/setup.sh
+    #volumes:
+      #- c:/dev/dbdl-perk-randomizer-app/src:/var/www/html
+    entrypoint: /opt/app-root/src/setup.sh
   mysql:
     image: mysql:latest
     ports:

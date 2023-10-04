@@ -1,39 +1,38 @@
 #!/bin/bash
-#Author: Caleb Harris
-#Description: Setup script for laravel webapp to be run as entrypoint for docker
+# change directories to the laravel_app
+cd /opt/app-root/src
 
-#change directories to the laravel app
-cd /var/www/html/dbdl-laravel-app
-
-#install dependencies
+# install dependencies
 composer install
 
-#create .env file > not in source control
+# create environment file
 cp .env.example .env
 
-#use environment variables passed in by docker compose to configure .env
+# use environment variables passed in by docker compose to 
+#   configure .env file
+
 sed -i "s|^DB_CONNECTION=.*|DB_CONNECTION=${DB_CONNECTION}|" .env
 sed -i "s|^DB_HOST=.*|DB_HOST=${DB_HOST}|" .env
 sed -i "s|^DB_PORT=.*|DB_PORT=${DB_PORT}|" .env
 sed -i "s|^DB_DATABASE=.*|DB_DATABASE=${DB_DATABASE}|" .env
 sed -i "s|^DB_USERNAME=.*|DB_USERNAME=${DB_USERNAME}|" .env
-sed -i "s|^DB_PASSWORD=.*|DB_PASSWORD=${DB_PASSWORD}|" .env
+sed -i "s|^DB_PASSWORD=.*|DB_PASSWORD='${DB_PASSWORD}'|" .env
 sed -i "s|^APP_ENV=.*|APP_ENV=${APP_ENV}|" .env
 sed -i "s|^APP_URL=.*|APP_URL=${APP_URL}|" .env
 sed -i "s|^APP_DEBUG=.*|APP_DEBUG=${APP_DEBUG}|" .env
 
-#generate new app key
+# generate new app key
 php artisan key:generate
 
-#install npm
+# install npm
 npm install
 npm run build
 
-#migrate DB
-php artisan migrate -y
+# migrate and seed database 
+#php artisan migrate
 
-#install dependencies here such as python connectors
+# install dependencies for upload script
+#pip3 install mysql-connector-python
 
-#run server
-#php-fpm
-apache2 -D FOREGROUND
+php-fpm
+httpd -D FOREGROUND
