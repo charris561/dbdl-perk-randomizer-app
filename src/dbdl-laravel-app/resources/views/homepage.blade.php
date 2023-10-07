@@ -23,5 +23,15 @@
             </div>
         </nav>
     </div>
+    <div class="main-content-container">
+        <div class="jumbotron">
+            <div class="jumbotron-left">
+                <h1 class="jumbo-title">Dead By Daylight Perk Randomizer</h1>
+            </div>
+            <div class="jumbotron-right">
+                <a href="#" class="generate-btn">Generate</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

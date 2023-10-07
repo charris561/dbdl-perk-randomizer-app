@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+:root{
+    --primary-color: #00fff2;
+    --background-color: rgb(167, 165, 165);
+}
+
 * {
     margin: 0;
     font-family: Roboto;
+}
+
+body{
+    background-color: var(--background-color);
 }
 
 .navbar-container {
@@ -43,8 +52,42 @@
     }
     li a:hover {
         background-color: #111;
+        color: white;
     }
     .active {
-        background-color: #04AA6D;
+        background-color: var(--primary-color);
+        color: black;
+    }
+}
+
+.main-content-container{
+    .jumbotron{
+        display: flex;
+        align-items: center;
+        .jumbotron-left{
+            font-size: 2em;
+            overflow-wrap: normal;
+            width: 75%;
+            padding: 2rem;
+        }
+        .jumbotron-right {
+            width: 25%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a.generate-btn{
+                color: var(--primary-color);
+                border: 3px solid var(--primary-color);
+                font-weight: bold;
+                font-size: 1.5rem;
+                border-radius: 5em;
+                padding: 10px 20px;
+
+                &:hover {
+                    background: var(--primary-color);
+                    color: white;
+                }
+            }
+        }
     }
 }
