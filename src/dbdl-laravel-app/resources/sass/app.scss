@@ -3,6 +3,7 @@
 :root{
     --primary-color: #00fff2;
     --background-color: rgb(167, 165, 165);
+    --secondary-background-color: #cfcdcd;
 }
 
 * {
@@ -87,6 +88,21 @@ body{
                     background: var(--primary-color);
                     color: white;
                 }
+            }
+        }
+    }
+    .perks-display-container{
+        background-color: var(--secondary-background-color);
+        .user-input-grid-container{
+            display: grid;
+            grid-template-columns: 50% 5% 45%;
+            padding: 2rem;
+            align-items: center;
+
+            .num-perks-picker-container{
+                display: grid;
+                grid-template-columns: 5rem;
+                gap: 10px;
             }
         }
     }

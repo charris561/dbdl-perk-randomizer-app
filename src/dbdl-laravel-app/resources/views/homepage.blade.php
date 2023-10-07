@@ -32,6 +32,17 @@
                 <a href="#" class="generate-btn">Generate</a>
             </div>
         </div>
+        <div class="perks-display-container">
+            <div class="user-input-grid-container">
+                <p>Number of Perks To Generate: </p>
+                <!-- Make the below use a PHP variable that is iterated with JS and buttons in this element later -->             
+                <p class="num-perks-to-generate">0</p>
+                <div class="num-perks-picker-container">
+                    <button>Up</button>
+                    <button>Down</button>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
