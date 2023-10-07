@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    font-family: Roboto;
+}
+
+.navbar-container {
+    .navbar{
+        background-color: #333;
+        position: relative;
+        height: 47px;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    a {
+        display: block;
+        padding: 14px 16px;
+        text-decoration: none;
+        color: white;
+        text-align: center;
+    }
+
+    .navbar-left{
+        display:inline-block;
+        height: 100%;
+        position: absolute;
+        li {
+            float: left;
+        }
+    }
+    .navbar-right{
+        float: right;
+        li {
+            float: right;
+        }
+    }
+    li a:hover {
+        background-color: #111;
+    }
+    .active {
+        background-color: #04AA6D;
+    }
+}
