@@ -42,6 +42,33 @@
                     <button>Down</button>
                 </div>
             </div>
+            <div class="perks-generated">
+                <div class="perks-display-grid">
+                    <div class="perk1">
+                        <img src="{{ asset('assets\images\perk_outline.png') }}" alt="">
+                        <p>Perk 1</p>
+                    </div>
+                    <div class="perk2">
+                        <img src="{{ asset('assets\images\perk_outline.png') }}" alt="">
+                        <p>Perk 2</p>
+                    </div>
+                    <div class="perk3">
+                        <img src="{{ asset('assets\images\perk_outline.png') }}" alt="">
+                        <p>Perk 3</p>
+                    </div>
+                    <div class="perk4">
+                        <img src="{{ asset('assets\images\perk_outline.png') }}" alt="">
+                        <p>Perk 4</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="perks-inventory-container">
+        <div class="perk-inventory">
+                <div class="perk-inventory-grid">
+                    
+                </div>
+            </div>
         </div>
     </div>
 </body>

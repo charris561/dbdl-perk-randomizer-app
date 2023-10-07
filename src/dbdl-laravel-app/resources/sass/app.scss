@@ -83,6 +83,7 @@ body{
                 font-size: 1.5rem;
                 border-radius: 5em;
                 padding: 10px 20px;
+                text-decoration: none;
 
                 &:hover {
                     background: var(--primary-color);
@@ -103,6 +104,20 @@ body{
                 display: grid;
                 grid-template-columns: 5rem;
                 gap: 10px;
+            }
+        }
+        .perks-generated {
+            .perks-display-grid {
+                display: grid;
+                align-items: center;
+                justify-content: center;
+                gap: 60px;
+                padding: 2rem 2rem;
+                grid-template-columns: auto auto auto auto;
+
+                p {
+                    text-align: center;
+                }
             }
         }
     }
