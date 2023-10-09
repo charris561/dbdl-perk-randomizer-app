@@ -96,9 +96,11 @@ body{
         background-color: var(--secondary-background-color);
         .user-input-grid-container{
             display: grid;
-            grid-template-columns: 50% 5% 45%;
+            grid-template-columns:  auto auto auto;
             padding: 2rem;
             align-items: center;
+            justify-content: center;
+            gap: 60px;
 
             .num-perks-picker-container{
                 display: grid;
