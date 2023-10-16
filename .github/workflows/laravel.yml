@@ -25,6 +25,8 @@ jobs:
         chmod -R 777 storage bootstrap/cache
         mkdir -p database
         touch database/database.sqlite
+        npm install
+        npm run build
 
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       working-directory: ./src/dbdl-laravel-app
