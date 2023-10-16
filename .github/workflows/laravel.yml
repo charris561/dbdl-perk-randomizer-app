@@ -2,9 +2,6 @@ name: Laravel
 
 on:
   push
-    #branches: [ "main" ]
-  #pull_request:
-    #branches: [ "main" ]
 
 jobs:
   laravel-tests:
@@ -16,7 +13,7 @@ jobs:
       with:
         php-version: '8.1'
     - uses: actions/checkout@v3
-    - name: Setup and build app
+    - name: Setup and build
       working-directory: ./src/dbdl-laravel-app
       run: |
         php -r "file_exists('.env') || copy('.env.example', '.env');"
