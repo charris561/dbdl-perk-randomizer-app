@@ -19,7 +19,7 @@ jobs:
     - name: Change working directory
       run: cd ./src/dbdl-laravel-app
     - name: Check working dir
-      run: echo($pwd)
+      run: pwd
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
     - name: Install Dependencies
