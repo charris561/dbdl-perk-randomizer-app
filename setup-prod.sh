@@ -8,7 +8,7 @@ cp -R src/dbdl-laravel-app/* /var/www/dbdl-laravel-app/
 cd /var/www/dbdl-laravel-app
 
 # install dependencies
-composer install
+/usr/local/bin/composer install
 
 # create environment file
 #cp .env.example .env
