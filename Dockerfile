@@ -17,15 +17,12 @@ RUN echo "Listen *:80" >> /etc/httpd/conf/httpd.conf
 COPY ./dbdl-vhost.conf /etc/httpd/conf.d
 
 #copy source 
-COPY ./src/dbdl-laravel-app /opt/app-root/src
-COPY ./setup.sh /opt/app-root/src
+COPY ./src/dbdl-laravel-app /var/www/dbdl-laravel-app
+COPY ./setup.sh /var/www/dbdl-laravel-app
 
 #give apache access to serve application
-RUN chown -R apache:apache /opt/app-root/src \
-    && chmod -R 755 /opt/app-root/src
-
-#expose port 80
-EXPOSE 80
+RUN chown -R apache:apache /var/www/dbdl-laravel-app \
+    && chmod -R 755 /var/www/dbdl-laravel-app
 
 #start apache
 CMD ["httpd", "-D", "FOREGROUND"]

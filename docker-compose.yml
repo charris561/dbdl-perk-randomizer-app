@@ -3,20 +3,18 @@ services:
   webserver:
     image: ethan-dbdl-webserver
     ports:
-      - "80:80"
+      - "443:443"
     env_file:
       - "C:\\Users\\harri\\Documents\\ethan-dbdl-webserver.env"
     depends_on:
       - mysql
     networks:
       - my-network
-    #volumes:
-      #- c:/dev/dbdl-perk-randomizer-app/src:/var/www/html
-    entrypoint: /opt/app-root/src/setup.sh
+    volumes:
+      - c:/dev/dbdl-perk-randomizer-app/ssl:/etc/pki/tls/certs/rockymountaintechlab.com
+    entrypoint: /var/www/dbdl-laravel-app/setup.sh
   mysql:
     image: mysql:latest
-    ports:
-      - "3306:3306"
     env_file:
       "C:\\Users\\harri\\Documents\\ethan-dbdl-mysql.env"
     volumes:
